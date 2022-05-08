@@ -52,8 +52,8 @@ static uint32_t bcm2835gpio_xfer(int n, uint32_t tms, uint32_t tdi)
 
 	for (int i = 0; i < n; i++) {
 		bcm2835gpio_write(0, tms & 1, tdi & 1);
-		tdo |= bcm2835gpio_read() << i;
 		bcm2835gpio_write(1, tms & 1, tdi & 1);
+		tdo |= bcm2835gpio_read() << i;
 		tms >>= 1;
 		tdi >>= 1;
 	}
