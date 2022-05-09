@@ -262,17 +262,22 @@ int main(int argc, char **argv) {
       switch (c) {
       case 'v':
          verbose = 1;
+         break;
       case '?':
          fprintf(stderr, "usage: %s [-v] [-c 0~31] [-m 0~31] [-i 0~31] [-o 0~31]\n", *argv);
          return 1;
       case 'c':
          tck_gpio = atoi(optarg);
+         break;
       case 'm':
          tms_gpio = atoi(optarg);
+         break;
       case 'i':
          tdi_gpio = atoi(optarg);
+         break;
       case 'o':
          tdo_gpio = atoi(optarg);
+         break;
       }
 
    if (bcm2835gpio_init() < 1) {
