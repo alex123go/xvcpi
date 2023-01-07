@@ -35,7 +35,7 @@ static int bcm2835gpio_read(void);
 static void bcm2835gpio_write(int tck, int tms, int tdi);
 
 static int bcm2835gpio_init(void);
-static int bcm2835gpio_quit(void);
+// static int bcm2835gpio_quit(void); // commented to remove warning this function was unused
 
 /* GPIO numbers for each signal. Negative values are invalid */
 static int tck_gpio = 11;

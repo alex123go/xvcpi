@@ -1,3 +1,20 @@
+# Reason for this fork.
+Using Raspberry pi 4 model B. \
+Image created with `Raspberry Pi Imager v1.7.3`.
+Image used : `Raspberry Pi OS (32-bit)`
+
+    Raspbian GNU/Linux 11 (bullseye)"
+    debian_version 11.6
+    Linux raspberrypi 5.15.76-v7l+
+
+
+XVCpi from [derekmulcahy](https://github.com/derekmulcahy/xvcpi) was compiling fine on the pi, but bitfiles were not transfering due to the following errors: 
+    
+    ERROR: [Labtools 27-3165] End of startup status: LOW 
+    ERROR: [Common 17-39] 'program_hw_devices' failed due to earlier errors.
+
+XVCpi from [le-petit-prince](https://github.com/le-petit-prince/xvcpi) looked promising, but it was not compiling. So the makefile was modified by changing order of the arguments.
+
 # Xilinx Virtual Cable Server for Raspberry Pi
 
 [Xilinx Virtual Cable](https://github.com/Xilinx/XilinxVirtualCable/) (XVC) is a TCP/IP-based protocol that  acts like a JTAG cable and provides a means to access and debug your  FPGA or SoC design without using a physical cable.
